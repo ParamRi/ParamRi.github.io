@@ -8,6 +8,7 @@
 	<body style ="background-color:aquamarine">
 		<style>
 	ul {
+		position: fixed;
 		list-style-type: none;
 		margin: 0;
 		padding: 0;
@@ -15,82 +16,130 @@
 	}
 
 	li {
-		float: left;
+		float: down;
+		padding: 5px;
 	}
 
 	a:link, a:visited{
 		display: block;
-		width: 200px;
-		background-color: #00ff00;
+		width: 250px;
+		background-color: darkgrey;
 		text-align: center;
 		front-weight: bold;
-		padding: 5px;
+		padding: 0;
+		-webkit-transition: width 2s, height 2s;
+		transition: width 2s, height 2s;
 	}
 	a:hover, a:active {
-		background-color: green;
+		background-color: grey;
+		width: 300px;
 	}
-	.twocolumns {
-		-webkit-columns: 100px 2;
-		-moz-columns: 100px 2;
-		columns: 100px 2;
+	.biography {
 		padding: 25px;
 		background-color: deepskyblue;
 	}
+	.contact {
+		padding: 25px;
+		background-color: bisque;
+	}
+	.resume {
+		padding: 25px;
+		background-color: turquoise
+	}
+	.sample {
+		padding: 25px;
+		background-color: gold;
+	}
+	.sidebar {
+		background-color: whitesmoke;
+		padding: 25px;
+		min-height: 2800;
+		float: right;
+		width: 250px;
+	}
 	img {
-    float: left;
-    margin: 20 20 10px 10px;
-}
+		float: none;
+		margin: 20 20 10px 10px;
+	}
 	</style>
-	<div id="home" style="background-color:olive; color:orange; padding:50px;">
+	
+	<div class="sidebar">
+		<ul>
+		  <li><a href="#home">Home</a></li>
+		  <li><a href="#bio">Bio</a></li>
+		  <li><a href="#contact">Contact</a></li>
+		  <li><a href="#resume">Resume</a></li>
+		  <li><a href="#sample">Sample Works</a></li>
+		</ul>
+	</div>
+	
+	<div id="home" style="background-color:aquamarine; color:black; padding:50px;">
 		<h1>Param A. Ri</h1>
 		<h2>Computer Science Student</h2>
 		<h2>Georiga Institute of Technology</h2>
 	</div>
-	<ul>
-	  <li><a href="#home">Home</a></li>
-	  <li><a href="#bio">Bio</a></li>
-	  <li><a href="#contact">Contact</a></li>
-	  <li><a href="#resume">Resume</a></li>
-	  <li><a href="#sample">Sample Works</a></li>
-	</ul>
+	
+	<div class="biography">
 	<h3 id="bio">
 		<b>About Me:</b>
 	</h3>
-	
-	<div class="twocolumns"><img src="profile.jpg" width="300" height="200">
-	Hello, my name is Param Ri. I am a Computer Science student at Georgia Institute of Technology.
-Like many CS students, I originally got into coding in an attempt to learn how video games were made.
-Because of this, the first programming language I learned was C++. Although I didn't get far in video game making,
-the skills I learned with C++ turned out to be useful when are started learning Java at Georgia Perimeter
-College.  The skills I learned in Java helped me develop a broader understanding of Computer Science. Some of
-the skills I learned include developing Graphic User Interfaces (GUIs), reading and building XML files,
-reading from input files, and writing to output files. 
-I earned a high GPA at GPC which allowed me to transfer to Georgia Tech. This semester I am taking Discrete 
-Mathematics, Linear Algebra, Data-Structures and Algorithms, and Principles of Microeconomics.
+	<div>
+		<p><img src="profile.jpg" style="float:left;" width="300" height="200">
+		Hello, my name is Param Ri. I am a Computer Science student at Georgia Institute of Technology.
+	Like many CS students, I originally got into coding in an attempt to learn how video games are made.
+	Because of this, the first programming language I learned was C++. Although I didn't get far in video game making,
+	the skills I learned with C++ turned out to be useful when are started learning Java at Georgia Perimeter
+	College.  The skills I learned in Java helped me develop a broader understanding of Computer Science. Some of
+	the skills I learned include developing Graphic User Interfaces (GUIs), reading and building XML files,
+	reading from input files, and writing to output files. 
+	I earned a high GPA at GPC which allowed me to transfer to Georgia Tech. This semester I am taking Discrete 
+	Mathematics, Linear Algebra, Data-Structures and Algorithms, and Principles of Microeconomics.
+		</p>
+	</div>
 
 	</div>
-	
-	<h3 id="contact"><b>My Contact Info:</b></h3>
-	
-	<a href="https://www.linkedin.com/pub/param-ri/1b/477/a7b">Param Ri's LinkedIn</a>
-	<p>
-		Email me at<a href="mailto:paramri@yahoo.com">paramri@yahoo.com</a> 
-		or <a href="mailto:paramri@gatech.edu">paramri@gatech.edu
-	</p>
-	
-	<h3 id ="resume"><b>Param Ri's Resume</b></h3>
-	<p>
-		<a href="ParamRiResume.doc" target='_blank'
-		title="Click here to download my resume">
-		Click here to open my resume</a>
-	</p>
-	<iframe src="ParamRiResume.html" width="75%" height="400" marginwidth="5%" ></iframe>
+	<div class="contact">
+		<h3 id="contact"><b>My Contact Info:</b></h3>
+		
+		<a href="https://www.linkedin.com/pub/param-ri/1b/477/a7b">Param Ri's LinkedIn</a>
+		<p>
+			Email me at<a href="mailto:paramri@yahoo.com">paramri@yahoo.com</a> 
+			or <a href="mailto:paramri@gatech.edu">paramri@gatech.edu</a>
+		</p>
+	</div>
+	<div class="resume">
+		<h3 id ="resume"><b>Param Ri's Resume</b></h3>
+		<p>
+			<a href="ParamRiResume.pdf" target='_blank'
+			title="Click here to download my resume">
+			Click here to download my resume</a>
+		</p>
+		<iframe src="ParamRiResume.pdf" width="75%" height="400" marginwidth="5%" ></iframe>
+	</div>
+	<div class="sample">
+		<h3 id="sample"><b>Sample Work</b></h3>
+		<p>The following are some examples of the courswork that I have done for previous courses.</p>
+		
+		<h4>Restaurant Bill</h4>
+		<p>This is a GUI that allows the user to input and print items onto a receipt from a restaurant menu. This 
+		program demonstrates how JButtons and JTextFields can be utilized.  
+		<a href="RestaurantBill.zip" download>
+			<img border="5px" src="bill.png" alt="bill" width="300" height="300">
+		</a>
+		<h4>Car Animation</h4>
+		<p>This program uses Action Listeners to allow the user to press a key in order to make the graphic do something
+		(like a video game!). Pressing the right key causes the Car drawing to move right toward a cliff. 
+		<a href="CarAnimation.zip" download>
+			<img border="5px" src="car.png" alt="car" width="600" height="300">
+		</a>
+		<h4>Simple Clock Program</h4>
+		<p>Not a bomb</p>
+		<a href="ClockViewer.java" download>
+			<img border="5px" src="clock.png" alt="clock" width="300" height="150">
+		</a>
+	</div>
 	<a href="Audio Test.html">Audio Link</a>
 	
-	<p> Youtube video test</p>
-	<p>
-	<iframe width="560" height="315" src="https://www.youtube.com/embed/pokRZfXzT-w" frameborder="0" allowfullscreen></iframe>
-	</p>
 	<p>Image Test</p>
 	<img src="galaxy collide.gif" alt="cool" style="width:304px;height:228px;">
 	<img src="sidscience.gif" alt="sid" style="width:304px;height:228px;">
