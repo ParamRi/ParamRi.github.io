@@ -29,11 +29,12 @@
 		display: block;
 		width: 250px;
 		background-color: darkgrey;
+		border:2px solid white;
 		text-align: center;
 		front-weight: bold;
 		padding: 0;
-		-webkit-transition: width 2s, height 2s;
-		transition: width 2s, height 2s;
+		-webkit-transition: width 1s, height 2s;
+		transition: width 1s, height 2s;
 	}
 	a:hover, a:active {
 		background-color: grey;
@@ -46,18 +47,24 @@
 		height: 460px;
 	}
 	.contact {
+		background:url(sand.jpg);
+		border:2px solid white;
+		background-size:cover;
 		padding: 25px;
 		background-color: bisque;
 	}
 	.resume {
+		border:2px solid yellow;
 		padding: 25px;
 		background-color: cornsilk
 	}
 	.sample {
+		border:2px solid black;
 		padding: 25px;
 		background-color: azure;
 	}
 	.sidebar {
+		border:3px solid blue;
 		background-color: lightcyan;
 		padding: 25px;
 		min-height: 2800;
@@ -80,10 +87,12 @@
 		</ul>
 	</div>
 	
-	<div id="home" style="color:black; padding:25px;">
-		<h1>Param A. Ri</h1>
-		<h2>Computer Science Student</h2>
-		<h2>Georiga Institute of Technology</h2>
+	<div id="home" style="color:white; padding:25px;">
+		<div style="border:4px solid white; padding 5px; width:400px;">
+		<h1 style="padding-left:1cm;">Param A. Ri</h1>
+		<h2 style="padding-left:1cm;">Computer Science Student</h2>
+		<h2 style="padding-left:1cm;">Georgia Institute of Technology</h2>
+		</div>
 	</div>
 	
 	<div class="biography">
@@ -112,10 +121,10 @@
 
 	</div>
 	<div class="contact">
-		<h3 id="contact"><b>My Contact Info:</b></h3>
+		<h3 id="contact" style="color:white;"><b>My Contact Info:</b></h3>
 		
 		<a href="https://www.linkedin.com/pub/param-ri/1b/477/a7b">Param Ri's LinkedIn</a>
-		<p>
+		<p style="color:white;">
 			Email me at<a href="mailto:paramri@yahoo.com">paramri@yahoo.com</a> 
 			or <a href="mailto:paramri@gatech.edu">paramri@gatech.edu</a>
 		</p>
@@ -132,7 +141,7 @@
 	<div class="sample">
 		<h3 id="sample"><b>Sample Work</b></h3>
 		<p>This is what I'm currently working on.</p>
-		
+
 		<h4>ParamBot</h4>
 		<p>I'm currently working on a twitter-bot that will recommend music to people based on a given genre.
 		<a href="https://twitter.com/paramsBot">
